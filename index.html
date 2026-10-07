@@ -1,1 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beneficio CITEC</title>
 
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(145deg, #061a3a, #0d3d78);
+    min-height: 100vh;
+    color: #17233d;
+}
+
+.contenedor {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 480px;
+    background: white;
+    border-radius: 25px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0,0,0,.3);
+}
+
+.logo {
+    font-size: 38px;
+    font-weight: 900;
+    color: #f58220;
+    margin-bottom: 3px;
+}
+
+.sublogo {
+    font-size: 12px;
+    font-weight: bold;
+    color: #718096;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #fff1e5;
+    color: #e66d08;
+    padding: 9px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #092957;
+    margin: 8px 0 12px;
+}
+
+.descripcion {
+    color: #5c6879;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+
+.carreras {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carrera {
+    border: none;
+    border-radius: 14px;
+    padding: 15px 12px;
+    background: #f58220;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.carrera:hover {
+    transform: scale(1.02);
+    background: #e87110;
+}
+
+.premio {
+    margin: 20px 0;
+    padding: 20px 12px;
+    border: 2px solid #f58220;
+    border-radius: 18px;
+    background: #fff8f1;
+}
+
+.gratis {
+    font-size: 31px;
+    font-weight: 900;
+    color: #e66d08;
+}
+
+.nombre-carrera {
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.whatsapp {
+    display: block;
+    text-decoration: none;
+    background: #159447;
+    color: white;
+    border-radius: 14px;
+    padding: 16px 12px;
+    font-size: 16px;
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+.volver {
+    width: 100%;
+    border: none;
+    background: #edf1f6;
+    color: #35435b;
+    border-radius: 14px;
+    padding: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.terminos {
+    margin-top: 18px;
+    font-size: 11px;
+    color: #929baa;
+    line-height: 1.5;
+}
+
+.oculto {
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<!-- PANTALLA INICIAL -->
+
+<section id="inicio">
+
+<div class="logo">CITEC</div>
+
+<div class="sublogo">
+INSTITUTO DE EDUCACIÓN SUPERIOR
+</div>
+
+<div class="etiqueta">
+🎁 BENEFICIO ESPECIAL
+</div>
+
+<h1>
+Tenemos un beneficio para ti
+</h1>
+
+<p class="descripcion">
+Selecciona la carrera que te interesa y descubre el beneficio que tenemos preparado para ti.
+</p>
+
+<div class="carreras">
+
+<button class="carrera" onclick="seleccionar('Operación de Equipos Pesados')">
+Operación de Equipos Pesados
+</button>
+
+<button class="carrera" onclick="seleccionar('Mantenimiento de Equipos Pesados')">
+Mantenimiento de Equipos Pesados
+</button>
+
+<button class="carrera" onclick="seleccionar('Seguridad Minera, Industrial y Medio Ambiente')">
+Seguridad Minera, Industrial y Medio Ambiente
+</button>
+
+<button class="carrera" onclick="seleccionar('Soldadura')">
+Soldadura
+</button>
+
+<button class="carrera" onclick="seleccionar('Control de Procesos de Almacenamiento')">
+Control de Procesos de Almacenamiento
+</button>
+
+<button class="carrera" onclick="seleccionar('Asistente Administrativo')">
+Asistente Administrativo
+</button>
+
+<button class="carrera" onclick="seleccionar('Operación de Computadoras')">
+Operación de Computadoras
+</button>
+
+<button class="carrera" onclick="seleccionar('Topografía')">
+Topografía
+</button>
+
+<button class="carrera" onclick="seleccionar('Operaciones Administrativas en Obras Civiles')">
+Operaciones Administrativas en Obras Civiles
+</button>
+
+<button class="carrera" onclick="seleccionar('Operaciones Constructivas en Obras Civiles')">
+Operaciones Constructivas en Obras Civiles
+</button>
+
+</div>
+
+<div class="terminos">
+Promoción sujeta a términos, condiciones y vigencia de la campaña.
+</div>
+
+</section>
+
+
+<!-- PANTALLA DEL PREMIO -->
+
+<section id="resultado" class="oculto">
+
+<div class="logo">CITEC</div>
+
+<div style="font-size:55px;">
+🎉
+</div>
+
+<h1>
+¡Tenemos una sorpresa para ti!
+</h1>
+
+<div class="premio">
+
+<div class="gratis">
+MATRÍCULA GRATIS
+</div>
+
+<div class="nombre-carrera" id="carreraElegida">
+</div>
+
+</div>
+
+<p class="descripcion">
+Para reclamar tu beneficio, escríbenos por WhatsApp indicando la carrera seleccionada.
+</p>
+
+<a
+id="botonWhatsApp"
+class="whatsapp"
+href="#"
+target="_blank"
+>
+📲 RECLAMAR MI BENEFICIO
+</a>
+
+<button class="volver" onclick="volver()">
+← Elegir otra carrera
+</button>
+
+<div class="terminos">
+El beneficio está sujeto a los términos, condiciones y vigencia establecidos por CITEC.
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+
+<script>
+
+function seleccionar(carrera) {
+
+    document.getElementById("inicio").classList.add("oculto");
+
+    document.getElementById("resultado").classList.remove("oculto");
+
+    document.getElementById("carreraElegida").innerText = carrera;
+
+    let mensaje =
+`🎉 ¡Hola CITEC!
+
+He seleccionado la carrera de *${carrera}* y he obtenido el beneficio de *MATRÍCULA GRATIS*.
+
+Quiero reclamar mi beneficio. 🎓`;
+
+    let enlace =
+        "https://wa.me/51944256496?text=" +
+        encodeURIComponent(mensaje);
+
+    document.getElementById("botonWhatsApp").href = enlace;
+
+    window.scrollTo(0,0);
+}
+
+
+function volver() {
+
+    document.getElementById("resultado").classList.add("oculto");
+
+    document.getElementById("inicio").classList.remove("oculto");
+
+}
+
+</script>
+
+</body>
+</html>
