@@ -331,27 +331,36 @@ h1 {
 /* TAPA */
 
 .tapa {
-
     position: absolute;
 
-    width: 160px;
+    width: 190px;
+    height: 42px;
 
-    height: 35px;
+    left: 0;
+    top: 50px;
 
-    left: -7px;
-
-    top: 15px;
-
-    background: #12a8e8;
+    background: linear-gradient(
+        135deg,
+        #0074d9,
+        #00a4e8
+    );
 
     border-radius: 8px;
 
-    z-index: 4;
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.3);
+
+    z-index: 5;
 
     transform-origin: left bottom;
 
     animation:
-        abrirTapa 2s ease-in-out 1s forwards;
+        abrirTapa 1.5s ease-in-out forwards,
+        desaparecerTapa 0.8s ease forwards;
+
+    animation-delay:
+        1s,
+        2.7s;
 }
 
 
@@ -497,6 +506,18 @@ h1 {
     }
 }
 
+    
+    @keyframes desaparecerTapa {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 
 @keyframes regaloEntrada {
 
@@ -523,7 +544,21 @@ h1 {
     }
 }
 
+@keyframes flotarEstrella {
 
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-70px) scale(1.2) rotate(20deg);
+    }
+
+    100% {
+        transform: translateY(-140px) scale(0.9) rotate(40deg);
+    }
+}
+    
 @keyframes estrellas {
 
     0% {
@@ -545,6 +580,7 @@ h1 {
     }
 }
 
+    
 @keyframes desaparecerCaja {
 
     0% {
