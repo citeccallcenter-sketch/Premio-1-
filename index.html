@@ -3,9 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matricula Gratis</title>
+
+<title>Beneficio Especial CITEC</title>
 
 <style>
+
+/* ============================= */
+/* CONFIGURACIÓN GENERAL */
+/* ============================= */
+
 * {
     box-sizing: border-box;
 }
@@ -13,274 +19,983 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(145deg, #061a3a, #0d3d78);
+
+    background:
+        radial-gradient(circle at 20% 10%, #ffffff 0%, transparent 25%),
+        linear-gradient(145deg, #063b8f, #19a9e8, #f8d43a);
+
     min-height: 100vh;
-    color: #17233d;
+    color: #17345f;
 }
+
+
+/* ============================= */
+/* CONTENEDOR */
+/* ============================= */
 
 .contenedor {
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+
+    padding: 18px;
 }
+
+
+/* ============================= */
+/* TARJETA PRINCIPAL */
+/* ============================= */
 
 .tarjeta {
+
     width: 100%;
-    max-width: 480px;
-    background: white;
-    border-radius: 25px;
-    padding: 30px 22px;
+    max-width: 490px;
+
+    background: rgba(255,255,255,0.97);
+
+    border-radius: 30px;
+
+    padding: 28px 20px 24px;
+
     text-align: center;
-    box-shadow: 0 15px 45px rgba(0,0,0,.3);
+
+    box-shadow:
+        0 20px 55px rgba(0,0,0,0.28);
+
+    overflow: hidden;
 }
 
-.logo {
-    font-size: 38px;
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.logo-imagen {
+
+    width: 190px;
+
+    max-width: 75%;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 6px;
+}
+
+
+/* ============================= */
+/* TEXTO DEBAJO DEL LOGO */
+/* ============================= */
+
+.eslogan {
+
+    font-size: 14px;
+
     font-weight: 900;
-    color: #f58220;
-    margin-bottom: 3px;
+
+    color: #064b9b;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 20px;
 }
 
-.sublogo {
-    font-size: 12px;
-    font-weight: bold;
-    color: #718096;
-    letter-spacing: 1.5px;
-    margin-bottom: 22px;
-}
+
+/* ============================= */
+/* ETIQUETA */
+/* ============================= */
 
 .etiqueta {
+
     display: inline-block;
-    background: #fff1e5;
-    color: #e66d08;
-    padding: 9px 16px;
+
+    background: #ffd72e;
+
+    color: #123c75;
+
+    padding: 9px 17px;
+
     border-radius: 50px;
+
     font-size: 13px;
-    font-weight: bold;
+
+    font-weight: 900;
+
     margin-bottom: 15px;
+
+    box-shadow:
+        0 5px 12px rgba(255,193,7,.25);
 }
+
+
+/* ============================= */
+/* TITULOS */
+/* ============================= */
 
 h1 {
-    font-size: 28px;
-    color: #092957;
+
+    font-size: 29px;
+
+    line-height: 1.15;
+
+    color: #063d86;
+
     margin: 8px 0 12px;
+
+    font-weight: 900;
 }
 
+
+/* ============================= */
+/* DESCRIPCIÓN */
+/* ============================= */
+
 .descripcion {
-    color: #5c6879;
+
+    color: #53677f;
+
     line-height: 1.5;
+
     font-size: 16px;
+
     margin-bottom: 22px;
 }
 
+
+/* ============================= */
+/* BOTONES DE CARRERAS */
+/* ============================= */
+
 .carreras {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
 }
 
+
 .carrera {
-    border: none;
-    border-radius: 14px;
-    padding: 15px 12px;
-    background: #f58220;
-    color: white;
+
+    width: 100%;
+
+    border: 3px solid #087fd1;
+
+    border-radius: 15px;
+
+    padding: 14px 12px;
+
+    background:
+        linear-gradient(90deg, #ffffff, #e8f8ff);
+
+    color: #064b91;
+
     font-size: 15px;
-    font-weight: bold;
+
+    font-weight: 900;
+
     cursor: pointer;
-    transition: .2s;
+
+    transition: all .2s ease;
+
+    box-shadow:
+        0 4px 10px rgba(0,100,180,.12);
 }
+
 
 .carrera:hover {
-    transform: scale(1.02);
-    background: #e87110;
+
+    transform: translateY(-2px);
+
+    background: #fff8b7;
+
+    border-color: #f4c900;
+
+    box-shadow:
+        0 7px 15px rgba(0,100,180,.18);
 }
 
-.premio {
-    margin: 20px 0;
-    padding: 20px 12px;
-    border: 2px solid #f58220;
-    border-radius: 18px;
-    background: #fff8f1;
-}
 
-.gratis {
-    font-size: 31px;
-    font-weight: 900;
-    color: #e66d08;
-}
-
-.nombre-carrera {
-    margin-top: 8px;
-    font-size: 17px;
-    font-weight: bold;
-}
-
-.whatsapp {
-    display: block;
-    text-decoration: none;
-    background: #159447;
-    color: white;
-    border-radius: 14px;
-    padding: 16px 12px;
-    font-size: 16px;
-    font-weight: 900;
-    margin-top: 15px;
-}
-
-.volver {
-    width: 100%;
-    border: none;
-    background: #edf1f6;
-    color: #35435b;
-    border-radius: 14px;
-    padding: 14px;
-    font-weight: bold;
-    margin-top: 10px;
-    cursor: pointer;
-}
+/* ============================= */
+/* TÉRMINOS */
+/* ============================= */
 
 .terminos {
+
     margin-top: 18px;
+
     font-size: 11px;
-    color: #929baa;
+
+    color: #7d8b9c;
+
     line-height: 1.5;
 }
 
+
+/* ============================= */
+/* OCULTAR SECCIONES */
+/* ============================= */
+
 .oculto {
-    display: none;
+
+    display: none !important;
 }
+
+
+/* ================================================= */
+/* ANIMACIÓN DEL REGALO */
+/* ================================================= */
+
+.pantalla-regalo {
+
+    min-height: 520px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* REGALO */
+
+.regalo {
+
+    position: relative;
+
+    width: 145px;
+
+    height: 115px;
+
+    margin: 30px auto;
+}
+
+
+/* CAJA */
+
+.caja {
+
+    position: absolute;
+
+    width: 145px;
+
+    height: 85px;
+
+    bottom: 0;
+
+    left: 0;
+
+    background: #0b7fd3;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.2);
+
+    animation:
+        regaloEntrada 1s ease forwards;
+}
+
+
+/* CINTA VERTICAL */
+
+.cinta-vertical {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 85px;
+
+    left: 60px;
+
+    bottom: 0;
+
+    background: #ffd52e;
+
+    z-index: 3;
+}
+
+
+/* TAPA */
+
+.tapa {
+
+    position: absolute;
+
+    width: 160px;
+
+    height: 35px;
+
+    left: -7px;
+
+    top: 15px;
+
+    background: #12a8e8;
+
+    border-radius: 8px;
+
+    z-index: 4;
+
+    transform-origin: left bottom;
+
+    animation:
+        abrirTapa 2s ease-in-out 1s forwards;
+}
+
+
+/* CINTA DE LA TAPA */
+
+.cinta-tapa {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 35px;
+
+    left: 67px;
+
+    top: 15px;
+
+    background: #ffd52e;
+
+    z-index: 5;
+
+    transform-origin: left bottom;
+
+    animation:
+        abrirTapa 2s ease-in-out 1s forwards;
+}
+
+
+/* LAZO */
+
+.lazo {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 40px;
+
+    left: 38px;
+
+    top: -18px;
+
+    z-index: 6;
+}
+
+
+.lazo::before,
+.lazo::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 38px;
+
+    height: 30px;
+
+    background: #ffd52e;
+
+    border-radius: 50%;
+
+    top: 5px;
+}
+
+
+.lazo::before {
+
+    left: 0;
+
+    transform: rotate(25deg);
+}
+
+
+.lazo::after {
+
+    right: 0;
+
+    transform: rotate(-25deg);
+}
+
+
+/* ESTRELLAS */
+
+.estrella {
+
+    position: absolute;
+
+    font-size: 25px;
+
+    opacity: 0;
+
+    animation:
+        estrellas 2s ease-out 1.5s forwards;
+}
+
+
+.estrella1 {
+
+    top: 15px;
+    left: 25px;
+}
+
+
+.estrella2 {
+
+    top: 5px;
+    right: 25px;
+}
+
+
+.estrella3 {
+
+    top: 80px;
+    right: 5px;
+}
+
+
+.estrella4 {
+
+    top: 80px;
+    left: 5px;
+}
+
+
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
+
+@keyframes abrirTapa {
+
+    0% {
+
+        transform:
+            rotate(0deg)
+            translateY(0);
+    }
+
+    100% {
+
+        transform:
+            rotate(-25deg)
+            translateY(-45px);
+    }
+}
+
+
+@keyframes regaloEntrada {
+
+    0% {
+
+        transform:
+            scale(.5);
+
+        opacity: 0;
+    }
+
+    70% {
+
+        transform:
+            scale(1.08);
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes estrellas {
+
+    0% {
+
+        transform:
+            scale(.3)
+            translateY(20px);
+
+        opacity: 0;
+    }
+
+    100% {
+
+        transform:
+            scale(1.2)
+            translateY(-20px);
+
+        opacity: 1;
+    }
+}
+
+
+/* ============================= */
+/* PANTALLA DEL PREMIO */
+/* ============================= */
+
+.premio-icono {
+
+    font-size: 65px;
+
+    margin: 5px 0;
+}
+
+
+.premio {
+
+    margin: 20px 0;
+
+    padding: 22px 12px;
+
+    border: 3px solid #ffd329;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf0,
+            #ffffff
+        );
+
+    box-shadow:
+        0 8px 20px rgba(240,190,0,.15);
+}
+
+
+.gratis {
+
+    font-size: 32px;
+
+    font-weight: 950;
+
+    color: #064b9b;
+
+    line-height: 1.1;
+}
+
+
+.nombre-carrera {
+
+    margin-top: 10px;
+
+    font-size: 17px;
+
+    font-weight: 900;
+
+    color: #087fd1;
+}
+
+
+/* ============================= */
+/* WHATSAPP */
+/* ============================= */
+
+.whatsapp {
+
+    display: block;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #159447,
+            #20b85b
+        );
+
+    color: white;
+
+    border-radius: 15px;
+
+    padding: 17px 12px;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    margin-top: 15px;
+
+    box-shadow:
+        0 7px 15px rgba(20,150,70,.25);
+
+    transition: .2s;
+}
+
+
+.whatsapp:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 20px rgba(20,150,70,.3);
+}
+
+
+/* ============================= */
+/* BOTÓN VOLVER */
+/* ============================= */
+
+.volver {
+
+    width: 100%;
+
+    border: 0;
+
+    background: #eaf6ff;
+
+    color: #075099;
+
+    border-radius: 14px;
+
+    padding: 14px;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media(max-width:400px) {
+
+    .tarjeta {
+
+        padding:
+            24px 15px;
+    }
+
+    h1 {
+
+        font-size: 25px;
+    }
+
+    .gratis {
+
+        font-size: 28px;
+    }
+
+    .logo-imagen {
+
+        width: 160px;
+    }
+
+}
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <div class="contenedor">
 
 <div class="tarjeta">
 
-<!-- PANTALLA INICIAL -->
 
-<section id="inicio">
+<!-- ================================================= -->
+<!-- PANTALLA 1: ANIMACIÓN DEL REGALO -->
+<!-- ================================================= -->
 
-<img src="logo-citec.webp" class="logo-imagen" alt="CITEC">
+<section id="regalo" class="pantalla-regalo">
+
+<img
+src="logo-citec.webp"
+class="logo-imagen"
+alt="Logo CITEC"
+>
 
 <div class="eslogan">
-Formando Profesionales de Calidad
+TÍTULO A NOMBRE DE MINEDU
 </div>
 
-<div class="etiqueta">
-🎁 OBTUVISTE UN PREMIO!
+
+<div class="regalo">
+
+<div class="estrella estrella1">⭐</div>
+
+<div class="estrella estrella2">✨</div>
+
+<div class="estrella estrella3">⭐</div>
+
+<div class="estrella estrella4">✨</div>
+
+
+<div class="lazo"></div>
+
+<div class="tapa"></div>
+
+<div class="cinta-tapa"></div>
+
+<div class="caja"></div>
+
+<div class="cinta-vertical"></div>
+
 </div>
+
 
 <h1>
-Tenemos un beneficio para ti...
+🎉 ¡OBTUVISTE UN PREMIO!
 </h1>
 
+
 <p class="descripcion">
-Selecciona la carrera que te interesa y descubre el beneficio que tenemos preparado para ti
+
+¡Tenemos una sorpresa especial para ti!
+
 </p>
 
-<div class="carreras">
-
-<button class="carrera" onclick="seleccionar('Operación de Equipos Pesados')">
-Operación de Equipos Pesados
-</button>
-
-<button class="carrera" onclick="seleccionar('Mantenimiento de Equipos Pesados')">
-Mantenimiento de Equipos Pesados
-</button>
-
-<button class="carrera" onclick="seleccionar('Seguridad Minera, Industrial y Medio Ambiente')">
-Seguridad Minera, Industrial y Medio Ambiente
-</button>
-
-<button class="carrera" onclick="seleccionar('Soldadura')">
-Soldadura
-</button>
-
-<button class="carrera" onclick="seleccionar('Control de Procesos de Almacenamiento')">
-Control de Procesos de Almacenamiento
-</button>
-
-<button class="carrera" onclick="seleccionar('Asistente Administrativo')">
-Asistente Administrativo
-</button>
-
-<button class="carrera" onclick="seleccionar('Operación de Computadoras')">
-Operación de Computadoras
-</button>
-
-<button class="carrera" onclick="seleccionar('Topografía')">
-Topografía
-</button>
-
-<button class="carrera" onclick="seleccionar('Operaciones Administrativas en Obras Civiles')">
-Operaciones Administrativas en Obras Civiles
-</button>
-
-<button class="carrera" onclick="seleccionar('Operaciones Constructivas en Obras Civiles')">
-Operaciones Constructivas en Obras Civiles
-</button>
-
-</div>
-
-<div class="terminos">
-Promoción sujeta a términos, condiciones y vigencia de la campaña.
-</div>
 
 </section>
 
 
-<!-- PANTALLA DEL PREMIO -->
+<!-- ================================================= -->
+<!-- PANTALLA 2: BENEFICIO -->
+<!-- ================================================= -->
+
+<section id="inicio" class="oculto">
+
+
+<img
+src="logo-citec.webp"
+class="logo-imagen"
+alt="Logo CITEC"
+>
+
+
+<div class="eslogan">
+TÍTULO A NOMBRE DE MINEDU
+</div>
+
+
+<div class="etiqueta">
+🎁 BENEFICIO ESPECIAL
+</div>
+
+
+<h1>
+Tenemos un beneficio para ti
+</h1>
+
+
+<p class="descripcion">
+
+Selecciona la carrera que te interesa
+y descubre el beneficio que tenemos
+preparado para ti.
+
+</p>
+
+
+<div class="carreras">
+
+
+<button
+class="carrera"
+onclick="seleccionar('Operación de Equipos Pesados')"
+>
+🚜 Operación de Equipos Pesados
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Mantenimiento de Equipos Pesados')"
+>
+🔧 Mantenimiento de Equipos Pesados
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Seguridad Minera, Industrial y Medio Ambiente')"
+>
+🦺 Seguridad Minera, Industrial y Medio Ambiente
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Soldadura')"
+>
+🔥 Soldadura
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Control de Procesos de Almacenamiento')"
+>
+📦 Control de Procesos de Almacenamiento
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Asistente Administrativo')"
+>
+💼 Asistente Administrativo
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Operación de Computadoras')"
+>
+💻 Operación de Computadoras
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Topografía')"
+>
+📐 Topografía
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Operaciones Administrativas en Obras Civiles')"
+>
+🏗️ Operaciones Administrativas en Obras Civiles
+</button>
+
+
+<button
+class="carrera"
+onclick="seleccionar('Operaciones Constructivas en Obras Civiles')"
+>
+🏗️ Operaciones Constructivas en Obras Civiles
+</button>
+
+
+</div>
+
+
+<div class="terminos">
+
+Promoción sujeta a términos,
+condiciones y vigencia de la campaña.
+
+</div>
+
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- PANTALLA 3: PREMIO -->
+<!-- ================================================= -->
 
 <section id="resultado" class="oculto">
 
-<div class="logo">CITEC</div>
 
-<div style="font-size:55px;">
+<img
+src="logo-citec.webp"
+class="logo-imagen"
+alt="Logo CITEC"
+>
+
+
+<div class="eslogan">
+TÍTULO A NOMBRE DE MINEDU
+</div>
+
+
+<div class="premio-icono">
 🎉
 </div>
 
+
 <h1>
-¡FELICIDADES! OBTUVISTE
+¡FELICIDADES!
 </h1>
+
 
 <div class="premio">
 
+
 <div class="gratis">
-MATRÍCULA GRATIS
+🎓 MATRÍCULA GRATIS
 </div>
 
-<div class="nombre-carrera" id="carreraElegida">
+
+<div
+class="nombre-carrera"
+id="carreraElegida"
+>
 </div>
 
+
 </div>
+
 
 <p class="descripcion">
-Para reclamar tu beneficio, escríbenos por WhatsApp indicando la carrera seleccionada.
+
+¡Has obtenido el beneficio de
+MATRÍCULA GRATIS!
+
+Para reclamarlo, escríbenos
+por WhatsApp.
+
 </p>
+
 
 <a
 id="botonWhatsApp"
 class="whatsapp"
 href="#"
 target="_blank"
+rel="noopener"
 >
+
 📲 RECLAMAR MI BENEFICIO
+
 </a>
 
-<button class="volver" onclick="volver()">
+
+<button
+class="volver"
+onclick="volver()"
+>
+
 ← Elegir otra carrera
+
 </button>
 
+
 <div class="terminos">
-El beneficio está sujeto a los términos, condiciones y vigencia establecidos por CITEC.
+
+El beneficio está sujeto a los términos,
+condiciones y vigencia establecidos por CITEC.
+
 </div>
 
+
 </section>
+
 
 </div>
 
@@ -289,40 +1004,94 @@ El beneficio está sujeto a los términos, condiciones y vigencia establecidos p
 
 <script>
 
+
+/* ================================================= */
+/* MOSTRAR LA PANTALLA PRINCIPAL DESPUÉS DEL REGALO */
+/* ================================================= */
+
+setTimeout(function() {
+
+    document
+        .getElementById("regalo")
+        .classList.add("oculto");
+
+    document
+        .getElementById("inicio")
+        .classList.remove("oculto");
+
+}, 4000);
+
+
+/* ================================================= */
+/* SELECCIÓN DE CARRERA */
+/* ================================================= */
+
 function seleccionar(carrera) {
 
-    document.getElementById("inicio").classList.add("oculto");
 
-    document.getElementById("resultado").classList.remove("oculto");
+    document
+        .getElementById("inicio")
+        .classList.add("oculto");
 
-    document.getElementById("carreraElegida").innerText = carrera;
+
+    document
+        .getElementById("resultado")
+        .classList.remove("oculto");
+
+
+    document
+        .getElementById("carreraElegida")
+        .innerText = carrera;
+
 
     let mensaje =
-`¡Hola CITEC!
+
+`🎉 ¡Hola CITEC!
 
 He seleccionado la carrera de *${carrera}* y he obtenido el beneficio de *MATRÍCULA GRATIS*.
 
-Deseo inscribirme!`;
+Quiero reclamar mi beneficio. 🎓`;
+
 
     let enlace =
-        "https://wa.me/51944256496?text=" +
+
+        "https://wa.me/51944256496?text="
+
+        +
+
         encodeURIComponent(mensaje);
 
-    document.getElementById("botonWhatsApp").href = enlace;
+
+    document
+        .getElementById("botonWhatsApp")
+        .href = enlace;
+
 
     window.scrollTo(0,0);
+
 }
 
 
+/* ================================================= */
+/* VOLVER A CARRERAS */
+/* ================================================= */
+
 function volver() {
 
-    document.getElementById("resultado").classList.add("oculto");
 
-    document.getElementById("inicio").classList.remove("oculto");
+    document
+        .getElementById("resultado")
+        .classList.add("oculto");
+
+
+    document
+        .getElementById("inicio")
+        .classList.remove("oculto");
 
 }
 
 </script>
+
 
 </body>
 </html>
