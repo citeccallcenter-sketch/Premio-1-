@@ -23,9 +23,14 @@ html {
 
 body {
     margin: 0;
+    padding: 0;
+
     font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
+
+    min-height: 100%;
+
     overflow-x: hidden;
+
     color: #123;
 
     background:
@@ -40,12 +45,15 @@ body {
 
 
 /* ================================================= */
-/* PANTALLA 1: REGALO */
+/* PANTALLA 1 - REGALO */
 /* ================================================= */
 
 #regalo {
+
     position: fixed;
+
     inset: 0;
+
     z-index: 1000;
 
     background:
@@ -74,18 +82,23 @@ body {
         );
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
+
     overflow: hidden;
 }
 
 
 /* ================================================= */
-/* BRILLOS DEL FONDO */
+/* BRILLOS */
 /* ================================================= */
 
 #regalo::before {
+
     content: "";
 
     position: absolute;
@@ -108,7 +121,9 @@ body {
     pointer-events: none;
 }
 
+
 #regalo::after {
+
     content: "";
 
     position: absolute;
@@ -133,10 +148,11 @@ body {
 
 
 /* ================================================= */
-/* TEXTO SUPERIOR */
+/* TEXTO ABRE TU REGALO */
 /* ================================================= */
 
 .texto-regalo {
+
     position: absolute;
 
     top: calc(50% - 360px);
@@ -146,11 +162,13 @@ body {
     transform: translateX(-50%);
 
     width: auto;
+
     max-width: 90%;
 
     color: #0057b8;
 
     font-size: 28px;
+
     font-weight: 900;
 
     text-align: center;
@@ -183,9 +201,11 @@ body {
 /* ================================================= */
 
 .regalo {
+
     position: relative;
 
     width: 190px;
+
     height: 210px;
 
     margin-top: 40px;
@@ -201,12 +221,15 @@ body {
 /* ================================================= */
 
 .caja {
+
     position: absolute;
 
     width: 170px;
+
     height: 120px;
 
     left: 10px;
+
     bottom: 10px;
 
     background:
@@ -229,12 +252,15 @@ body {
     animation-delay: 2.7s;
 }
 
+
 .caja::before {
+
     content: "";
 
     position: absolute;
 
     width: 28px;
+
     height: 100%;
 
     left: 50%;
@@ -249,15 +275,19 @@ body {
         );
 }
 
+
 .caja::after {
+
     content: "";
 
     position: absolute;
 
     width: 100%;
+
     height: 25px;
 
     bottom: 0;
+
     left: 0;
 
     background:
@@ -270,12 +300,15 @@ body {
 /* ================================================= */
 
 .tapa {
+
     position: absolute;
 
     width: 190px;
+
     height: 42px;
 
     left: 0;
+
     top: 50px;
 
     background:
@@ -303,10 +336,13 @@ body {
         2.7s;
 }
 
+
 .cinta-tapa {
+
     position: absolute;
 
     width: 28px;
+
     height: 42px;
 
     left: 50%;
@@ -327,12 +363,15 @@ body {
 /* ================================================= */
 
 .lazo {
+
     position: absolute;
 
     top: 10px;
+
     left: 50%;
 
     width: 65px;
+
     height: 40px;
 
     transform: translateX(-50%);
@@ -345,13 +384,16 @@ body {
     animation-delay: 2.7s;
 }
 
+
 .lazo::before,
 .lazo::after {
+
     content: "";
 
     position: absolute;
 
     width: 35px;
+
     height: 25px;
 
     background:
@@ -367,13 +409,19 @@ body {
     top: 0;
 }
 
+
 .lazo::before {
+
     left: 0;
+
     transform: rotate(25deg);
 }
 
+
 .lazo::after {
+
     right: 0;
+
     transform: rotate(-25deg);
 }
 
@@ -383,6 +431,7 @@ body {
 /* ================================================= */
 
 .estrella {
+
     position: absolute;
 
     z-index: 5;
@@ -401,6 +450,7 @@ body {
         );
 }
 
+
 .e1 { color: #ffe600; }
 .e2 { color: #ff4fc3; }
 .e3 { color: #7c4dff; }
@@ -417,11 +467,13 @@ body {
     animation-delay: 1.4s, 2s;
 }
 
+
 .e2 {
     top: 28%;
     right: 18%;
     animation-delay: 1.6s, 2.2s;
 }
+
 
 .e3 {
     top: 48%;
@@ -429,11 +481,13 @@ body {
     animation-delay: 1.8s, 2.4s;
 }
 
+
 .e4 {
     top: 45%;
     right: 10%;
     animation-delay: 2s, 2.6s;
 }
+
 
 .e5 {
     top: 70%;
@@ -441,11 +495,13 @@ body {
     animation-delay: 2.2s, 2.8s;
 }
 
+
 .e6 {
     top: 68%;
     right: 22%;
     animation-delay: 2.4s, 3s;
 }
+
 
 .e7 {
     top: 18%;
@@ -455,6 +511,7 @@ body {
 
     animation-delay: 1.5s, 2.1s;
 }
+
 
 .e8 {
     top: 75%;
@@ -467,23 +524,27 @@ body {
 
 
 /* ================================================= */
-/* PREMIO DE LA PRIMERA PANTALLA */
+/* PREMIO */
 /* ================================================= */
 
 .premio-regalo {
+
     position: absolute;
 
     bottom: 13%;
+
     left: 50%;
 
     transform: translateX(-50%);
 
     width: auto;
+
     max-width: 90%;
 
     color: #0057b8;
 
     font-size: 30px;
+
     font-weight: 900;
 
     text-align: center;
@@ -680,10 +741,11 @@ body {
 
 
 /* ================================================= */
-/* PANTALLAS 2 Y 3 */
+/* PANTALLAS 2 Y 3 - ESCRITORIO */
 /* ================================================= */
 
 section {
+
     position: relative;
 
     width: 100%;
@@ -731,14 +793,17 @@ section {
 
 
 section::after {
+
     content: "";
 
     position: absolute;
 
     width: 420px;
+
     height: 420px;
 
     top: -180px;
+
     right: -150px;
 
     border-radius: 50%;
@@ -761,6 +826,7 @@ section::after {
 /* ================================================= */
 
 section::before {
+
     content: "";
 
     position: absolute;
@@ -771,6 +837,7 @@ section::before {
     max-width: 560px;
 
     top: 18px;
+
     bottom: 18px;
 
     background:
@@ -786,7 +853,9 @@ section::before {
 
 
 section > * {
+
     position: relative;
+
     z-index: 2;
 }
 
@@ -796,6 +865,7 @@ section > * {
 /* ================================================= */
 
 .logo-imagen {
+
     width: 190px;
 
     max-width: 80%;
@@ -811,6 +881,7 @@ section > * {
 /* ================================================= */
 
 .etiqueta {
+
     display: inline-block;
 
     background:
@@ -840,6 +911,7 @@ section > * {
 /* ================================================= */
 
 h1 {
+
     color: #0057b8;
 
     font-size: 30px;
@@ -853,6 +925,7 @@ h1 {
 /* ================================================= */
 
 .descripcion {
+
     max-width: 430px;
 
     color: #444;
@@ -870,6 +943,7 @@ h1 {
 /* ================================================= */
 
 .carreras {
+
     width: 100%;
 
     max-width: 480px;
@@ -884,7 +958,12 @@ h1 {
 }
 
 
+/* ================================================= */
+/* BOTONES */
+/* ================================================= */
+
 .carrera {
+
     border: none;
 
     padding: 12px 14px;
@@ -914,6 +993,7 @@ h1 {
 
 
 .carrera:hover {
+
     transform: translateY(-2px);
 
     background:
@@ -930,6 +1010,7 @@ h1 {
 /* ================================================= */
 
 .terminos {
+
     max-width: 430px;
 
     margin-top: 14px;
@@ -947,12 +1028,15 @@ h1 {
 /* ================================================= */
 
 .premio-icono {
+
     font-size: 50px;
+
     margin: 5px 0;
 }
 
 
 .premio {
+
     width: 100%;
 
     max-width: 430px;
@@ -976,6 +1060,7 @@ h1 {
 
 
 .gratis {
+
     color: #0057b8;
 
     font-size: 25px;
@@ -987,6 +1072,7 @@ h1 {
 
 
 .nombre-carrera {
+
     color: #333;
 
     font-weight: bold;
@@ -1000,6 +1086,7 @@ h1 {
 /* ================================================= */
 
 .whatsapp {
+
     display: block;
 
     width: 100%;
@@ -1033,6 +1120,7 @@ h1 {
 
 
 .whatsapp:hover {
+
     transform: scale(1.02);
 
     background: #20b957;
@@ -1044,6 +1132,7 @@ h1 {
 /* ================================================= */
 
 .volver {
+
     margin-top: 15px;
 
     border: none;
@@ -1066,37 +1155,60 @@ h1 {
 
 @media (max-width: 480px) {
 
+    /*
+       LA PANTALLA YA NO SE FUERZA A 100VH.
+       SU ALTURA DEPENDE DEL CONTENIDO.
+    */
+
     section {
-        padding: 25px 15px;
-    }
 
+        width: 100%;
 
-    /* ============================================= */
-    /* SEGUNDA PANTALLA */
-    /* CENTRADA Y SIN SOBRA DEL CUADRO */
-    /* ============================================= */
-
-    #inicio {
-
-        min-height: 100vh;
+        min-height: 0;
 
         height: auto;
 
-        justify-content: center;
+        padding:
+            12px 15px;
 
-        align-items: center;
+        justify-content:
+            flex-start;
+
+        align-items:
+            center;
 
         overflow: visible;
+    }
 
-        padding-top: 25px;
 
-        padding-bottom: 25px;
+    /* ================================================= */
+    /* SEGUNDA PANTALLA */
+    /* ================================================= */
+
+    #inicio {
+
+        width: 100%;
+
+        min-height: 0;
+
+        height: auto;
+
+        padding:
+            12px 15px 15px;
+
+        justify-content:
+            flex-start;
+
+        align-items:
+            center;
+
+        overflow: visible;
     }
 
 
     /*
-       El cuadro blanco sigue exactamente
-       la altura del contenido de #inicio.
+       EL CUADRO BLANCO TERMINA
+       EXACTAMENTE CON EL CONTENIDO.
     */
 
     #inicio::before {
@@ -1104,37 +1216,42 @@ h1 {
         width:
             calc(100% - 20px);
 
-        max-width: 560px;
+        max-width:
+            560px;
 
-        top: 10px;
+        top: 0;
 
-        bottom: 10px;
+        bottom: 0;
 
         height: auto;
 
-        border-radius: 22px;
+        border-radius:
+            22px;
     }
 
 
-    /* ============================================= */
+    /* ================================================= */
     /* TERCERA PANTALLA */
-    /* ============================================= */
+    /* ================================================= */
 
     #resultado {
 
-        min-height: 100vh;
+        width: 100%;
+
+        min-height: 0;
 
         height: auto;
 
-        justify-content: center;
+        padding:
+            20px 15px;
 
-        align-items: center;
+        justify-content:
+            flex-start;
+
+        align-items:
+            center;
 
         overflow: visible;
-
-        padding-top: 25px;
-
-        padding-bottom: 25px;
     }
 
 
@@ -1143,31 +1260,175 @@ h1 {
         width:
             calc(100% - 20px);
 
-        top: 10px;
+        top: 0;
 
-        bottom: 10px;
+        bottom: 0;
 
         height: auto;
 
-        border-radius: 22px;
+        border-radius:
+            22px;
     }
 
 
-    /* ============================================= */
+    /* ================================================= */
+    /* LOGO */
+    /* ================================================= */
+
+    .logo-imagen {
+
+        width:
+            145px;
+
+        max-width:
+            75%;
+
+        margin:
+            0 auto 7px;
+    }
+
+
+    /* ================================================= */
+    /* ETIQUETA */
+    /* ================================================= */
+
+    .etiqueta {
+
+        font-size:
+            14px;
+
+        padding:
+            7px 13px;
+
+        margin-bottom:
+            8px;
+    }
+
+
+    /* ================================================= */
+    /* DESCRIPCIÓN */
+    /* ================================================= */
+
+    .descripcion {
+
+        font-size:
+            15px;
+
+        line-height:
+            1.4;
+
+        margin-top:
+            5px;
+
+        margin-bottom:
+            12px;
+
+        max-width:
+            350px;
+    }
+
+
+    /* ================================================= */
+    /* CARRERAS */
+    /* ================================================= */
+
+    .carreras {
+
+        width:
+            100%;
+
+        max-width:
+            400px;
+
+        gap:
+            7px;
+
+        padding:
+            0 2px;
+    }
+
+
+    .carrera {
+
+        width:
+            100%;
+
+        font-size:
+            13px;
+
+        padding:
+            10px;
+
+        border-radius:
+            11px;
+    }
+
+
+    /* ================================================= */
+    /* TÉRMINOS */
+    /* ================================================= */
+
+    .terminos {
+
+        max-width:
+            350px;
+
+        margin-top:
+            9px;
+
+        margin-bottom:
+            0;
+
+        font-size:
+            11px;
+
+        line-height:
+            1.35;
+    }
+
+
+    /* ================================================= */
+    /* PANTALLA 3 */
+    /* ================================================= */
+
+    .premio-icono {
+
+        font-size:
+            42px;
+    }
+
+
+    h1 {
+
+        font-size:
+            26px;
+    }
+
+
+    .gratis {
+
+        font-size:
+            22px;
+    }
+
+
+    /* ================================================= */
     /* PRIMERA PANTALLA */
-    /* ============================================= */
+    /* ================================================= */
 
     .texto-regalo {
 
         top:
             calc(50% - 300px);
 
-        font-size: 23px;
+        font-size:
+            23px;
 
         padding:
             10px 18px;
 
-        max-width: 94%;
+        max-width:
+            94%;
     }
 
 
@@ -1176,99 +1437,24 @@ h1 {
         transform:
             scale(0.9);
 
-        margin-top: 30px;
+        margin-top:
+            30px;
     }
 
 
     .premio-regalo {
 
-        font-size: 24px;
+        font-size:
+            24px;
 
         padding:
             10px 16px;
 
-        bottom: 12%;
+        bottom:
+            12%;
 
-        max-width: 94%;
-    }
-
-
-    /* ============================================= */
-    /* CONTENIDO */
-    /* ============================================= */
-
-    .logo-imagen {
-
-        width: 155px;
-
-        margin-bottom: 7px;
-    }
-
-
-    .etiqueta {
-
-        font-size: 14px;
-
-        padding:
-            7px 13px;
-
-        margin-bottom: 8px;
-    }
-
-
-    .descripcion {
-
-        font-size: 15px;
-
-        margin-top: 5px;
-
-        margin-bottom: 14px;
-
-        max-width: 350px;
-    }
-
-
-    .carreras {
-
-        gap: 7px;
-
-        max-width: 400px;
-    }
-
-
-    .carrera {
-
-        font-size: 13px;
-
-        padding:
-            10px 10px;
-
-        border-radius: 11px;
-    }
-
-
-    .terminos {
-
-        font-size: 11px;
-
-        margin-top: 10px;
-
-        max-width: 350px;
-    }
-
-
-    .premio-icono {
-        font-size: 42px;
-    }
-
-
-    h1 {
-        font-size: 26px;
-    }
-
-
-    .gratis {
-        font-size: 22px;
+        max-width:
+            94%;
     }
 
 }
@@ -1281,74 +1467,99 @@ h1 {
 @media (max-height: 700px) and (max-width: 480px) {
 
     /*
-       IMPORTANTE:
-       No fijamos una altura al cuadro blanco.
-       Así no vuelve a aparecer espacio sobrante.
+       NO USAMOS 100VH.
+       NO USAMOS ALTURA FIJA.
+       NO HAY ESPACIO AZUL SOBRANTE.
     */
 
     #inicio {
 
-        min-height: 100vh;
+        min-height:
+            0;
 
-        height: auto;
+        height:
+            auto;
 
-        justify-content: center;
+        padding:
+            10px 15px 12px;
 
-        overflow: visible;
+        justify-content:
+            flex-start;
 
-        padding-top: 20px;
-
-        padding-bottom: 20px;
+        overflow:
+            visible;
     }
 
 
     #inicio::before {
 
-        top: 8px;
+        top:
+            0;
 
-        bottom: 8px;
+        bottom:
+            0;
 
-        height: auto;
+        height:
+            auto;
 
-        min-height: 0;
+        min-height:
+            0;
     }
 
 
     #resultado {
 
-        min-height: 100vh;
+        min-height:
+            0;
 
-        height: auto;
+        height:
+            auto;
 
-        justify-content: center;
+        padding:
+            15px;
 
-        overflow: visible;
+        justify-content:
+            flex-start;
 
-        padding-top: 20px;
-
-        padding-bottom: 20px;
+        overflow:
+            visible;
     }
 
 
     #resultado::before {
 
-        top: 8px;
+        top:
+            0;
 
-        bottom: 8px;
+        bottom:
+            0;
 
-        height: auto;
+        height:
+            auto;
 
-        min-height: 0;
+        min-height:
+            0;
     }
 
 
     .logo-imagen {
-        width: 135px;
+
+        width:
+            135px;
     }
 
 
     .descripcion {
-        margin-bottom: 10px;
+
+        margin-bottom:
+            9px;
+    }
+
+
+    .carreras {
+
+        gap:
+            6px;
     }
 
 
@@ -1357,17 +1568,15 @@ h1 {
         padding:
             9px 10px;
 
-        font-size: 12.5px;
-    }
-
-
-    .carreras {
-        gap: 6px;
+        font-size:
+            12.5px;
     }
 
 
     .terminos {
-        margin-top: 8px;
+
+        margin-top:
+            7px;
     }
 
 }
@@ -1381,7 +1590,7 @@ h1 {
 
 
 <!-- ================================================= -->
-<!-- PANTALLA 1 -->
+<!-- PANTALLA 1: REGALO -->
 <!-- ================================================= -->
 
 <div id="regalo">
@@ -1398,12 +1607,19 @@ h1 {
 
 
         <div class="estrella e1">★</div>
+
         <div class="estrella e2">★</div>
+
         <div class="estrella e3">✦</div>
+
         <div class="estrella e4">★</div>
+
         <div class="estrella e5">✦</div>
+
         <div class="estrella e6">★</div>
+
         <div class="estrella e7">✦</div>
+
         <div class="estrella e8">★</div>
 
 
@@ -1411,7 +1627,9 @@ h1 {
 
 
         <div class="tapa">
+
             <div class="cinta-tapa"></div>
+
         </div>
 
 
@@ -1433,7 +1651,7 @@ h1 {
 
 
 <!-- ================================================= -->
-<!-- PANTALLA 2 -->
+<!-- PANTALLA 2: CARRERAS -->
 <!-- ================================================= -->
 
 <section id="inicio" class="oculto">
@@ -1468,7 +1686,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Operación de Equipos Pesados')"
         >
+
             🚜 Operación de Equipos Pesados
+
         </button>
 
 
@@ -1476,7 +1696,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Mantenimiento de Equipos Pesados')"
         >
+
             🔧 Mantenimiento de Equipos Pesados
+
         </button>
 
 
@@ -1484,7 +1706,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Seguridad Minera, Industrial y Medio Ambiente')"
         >
+
             🦺 Seguridad Minera, Industrial y Medio Ambiente
+
         </button>
 
 
@@ -1492,7 +1716,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Soldadura')"
         >
+
             🔥 Soldadura
+
         </button>
 
 
@@ -1500,7 +1726,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Control de Procesos de Almacenamiento')"
         >
+
             📦 Control de Procesos de Almacenamiento
+
         </button>
 
 
@@ -1508,7 +1736,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Asistente Administrativo')"
         >
+
             💼 Asistente Administrativo
+
         </button>
 
 
@@ -1516,7 +1746,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Operación de Computadoras')"
         >
+
             💻 Operación de Computadoras
+
         </button>
 
 
@@ -1524,7 +1756,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Topografía')"
         >
+
             📐 Topografía
+
         </button>
 
 
@@ -1532,7 +1766,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Operaciones Administrativas en Obras Civiles')"
         >
+
             🏗️ Operaciones Administrativas en Obras Civiles
+
         </button>
 
 
@@ -1540,7 +1776,9 @@ h1 {
             class="carrera"
             onclick="seleccionar('Operaciones Constructivas en Obras Civiles')"
         >
+
             🏗️ Operaciones Constructivas en Obras Civiles
+
         </button>
 
 
@@ -1560,7 +1798,7 @@ h1 {
 
 
 <!-- ================================================= -->
-<!-- PANTALLA 3 -->
+<!-- PANTALLA 3: RESULTADO -->
 <!-- ================================================= -->
 
 <section id="resultado" class="oculto">
@@ -1656,9 +1894,8 @@ h1 {
 
 <script>
 
-
 /* ================================================= */
-/* PASAR DE PANTALLA 1 A PANTALLA 2 */
+/* CAMBIO DE PANTALLA */
 /* ================================================= */
 
 setTimeout(function() {
@@ -1672,6 +1909,8 @@ setTimeout(function() {
         .getElementById("inicio")
         .classList.remove("oculto");
 
+
+    window.scrollTo(0, 0);
 
 }, 5000);
 
@@ -1746,7 +1985,6 @@ function volver() {
 }
 
 </script>
-
 
 </body>
 </html>
