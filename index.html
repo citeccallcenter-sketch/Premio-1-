@@ -1,16 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CITEC</title>
+<title>Beneficio CITEC</title>
 
 <style>
 
-/* ============================= */
+/* ================================================= */
 /* CONFIGURACIÓN GENERAL */
-/* ============================= */
+/* ================================================= */
 
 * {
     box-sizing: border-box;
@@ -18,275 +21,113 @@
 
 body {
     margin: 0;
+
     font-family: Arial, Helvetica, sans-serif;
 
-    background:
-        radial-gradient(circle at 20% 10%, #ffffff 0%, transparent 25%),
-        linear-gradient(145deg, #063b8f, #19a9e8, #f8d43a);
+    background: linear-gradient(
+        135deg,
+        #0057b8,
+        #00aeea,
+        #ffffff,
+        #ffd21c
+    );
 
     min-height: 100vh;
-    color: #17345f;
+
+    overflow-x: hidden;
+
+    color: #123;
 }
 
 
-/* ============================= */
-/* CONTENEDOR */
-/* ============================= */
+/* ================================================= */
+/* PANTALLA 1: REGALO */
+/* ================================================= */
 
-.contenedor {
-    min-height: 100vh;
+#regalo {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #ffffff 0%,
+            #dff7ff 25%,
+            #36bdf2 55%,
+            #0057b8 100%
+        );
 
     display: flex;
+
+    flex-direction: column;
+
     justify-content: center;
+
     align-items: center;
-
-    padding: 18px;
-}
-
-
-/* ============================= */
-/* TARJETA PRINCIPAL */
-/* ============================= */
-
-.tarjeta {
-
-    width: 100%;
-    max-width: 490px;
-
-    background: rgba(255,255,255,0.97);
-
-    border-radius: 30px;
-
-    padding: 28px 20px 24px;
-
-    text-align: center;
-
-    box-shadow:
-        0 20px 55px rgba(0,0,0,0.28);
 
     overflow: hidden;
 }
 
 
-/* ============================= */
-/* LOGO */
-/* ============================= */
+/* ================================================= */
+/* TEXTO DEL REGALO */
+/* ================================================= */
 
-.logo-imagen {
+.texto-regalo {
 
-    width: 190px;
+    color: #ffffff;
 
-    max-width: 75%;
+    font-size: 28px;
 
-    height: auto;
+    font-weight: bold;
 
-    display: block;
+    text-align: center;
 
-    margin: 0 auto 6px;
-}
+    margin-bottom: 35px;
 
+    text-shadow:
+        0 3px 8px rgba(0,0,0,0.35);
 
-/* ============================= */
-/* TEXTO DEBAJO DEL LOGO */
-/* ============================= */
-
-.eslogan {
-
-    font-size: 14px;
-
-    font-weight: 900;
-
-    color: #064b9b;
-
-    letter-spacing: 0.5px;
-
-    margin-bottom: 20px;
-}
-
-
-/* ============================= */
-/* ETIQUETA */
-/* ============================= */
-
-.etiqueta {
-
-    display: inline-block;
-
-    background: #ffd72e;
-
-    color: #123c75;
-
-    padding: 9px 17px;
-
-    border-radius: 50px;
-
-    font-size: 13px;
-
-    font-weight: 900;
-
-    margin-bottom: 15px;
-
-    box-shadow:
-        0 5px 12px rgba(255,193,7,.25);
-}
-
-
-/* ============================= */
-/* TITULOS */
-/* ============================= */
-
-h1 {
-
-    font-size: 29px;
-
-    line-height: 1.15;
-
-    color: #063d86;
-
-    margin: 8px 0 12px;
-
-    font-weight: 900;
-}
-
-
-/* ============================= */
-/* DESCRIPCIÓN */
-/* ============================= */
-
-.descripcion {
-
-    color: #53677f;
-
-    line-height: 1.5;
-
-    font-size: 16px;
-
-    margin-bottom: 22px;
-}
-
-
-/* ============================= */
-/* BOTONES DE CARRERAS */
-/* ============================= */
-
-.carreras {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 10px;
-}
-
-
-.carrera {
-
-    width: 100%;
-
-    border: 3px solid #087fd1;
-
-    border-radius: 15px;
-
-    padding: 14px 12px;
-
-    background:
-        linear-gradient(90deg, #ffffff, #e8f8ff);
-
-    color: #064b91;
-
-    font-size: 15px;
-
-    font-weight: 900;
-
-    cursor: pointer;
-
-    transition: all .2s ease;
-
-    box-shadow:
-        0 4px 10px rgba(0,100,180,.12);
-}
-
-
-.carrera:hover {
-
-    transform: translateY(-2px);
-
-    background: #fff8b7;
-
-    border-color: #f4c900;
-
-    box-shadow:
-        0 7px 15px rgba(0,100,180,.18);
-}
-
-
-/* ============================= */
-/* TÉRMINOS */
-/* ============================= */
-
-.terminos {
-
-    margin-top: 18px;
-
-    font-size: 11px;
-
-    color: #7d8b9c;
-
-    line-height: 1.5;
-}
-
-
-/* ============================= */
-/* OCULTAR SECCIONES */
-/* ============================= */
-
-.oculto {
-
-    display: none !important;
+    animation:
+        aparecerTexto 1s ease;
 }
 
 
 /* ================================================= */
-/* ANIMACIÓN DEL REGALO */
+/* CONTENEDOR DEL REGALO */
 /* ================================================= */
-
-.pantalla-regalo {
-
-    min-height: 520px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-
-/* REGALO */
 
 .regalo {
 
     position: relative;
 
-    width: 145px;
+    width: 190px;
 
-    height: 115px;
+    height: 210px;
 
-    margin: 30px auto;
+    animation:
+        entradaRegalo 1s ease;
 }
 
 
+/* ================================================= */
 /* CAJA */
+/* ================================================= */
 
 .caja {
+
     position: absolute;
 
     width: 170px;
+
     height: 120px;
 
     left: 10px;
+
     bottom: 10px;
 
     background: linear-gradient(
@@ -302,41 +143,76 @@ h1 {
 
     z-index: 2;
 
-    /* La caja desaparece después de abrirse */
-    animation: desaparecerCaja 1.2s ease forwards;
+    /*
+       La caja desaparece después
+       de que se abre el regalo.
+    */
+
+    animation:
+        desaparecerCaja 1.2s ease forwards;
+
     animation-delay: 2.7s;
 }
 
 
-/* CINTA VERTICAL */
+/* ================================================= */
+/* CINTA VERTICAL DE LA CAJA */
+/* ================================================= */
 
-.cinta-vertical {
+.caja::before {
+
+    content: "";
 
     position: absolute;
 
-    width: 25px;
+    width: 28px;
 
-    height: 85px;
+    height: 100%;
 
-    left: 60px;
+    left: 50%;
 
-    bottom: 0;
+    transform: translateX(-50%);
 
-    background: #ffd52e;
-
-    z-index: 3;
+    background: #ffd21c;
 }
 
 
+/* ================================================= */
+/* PARTE INFERIOR DE LA CAJA */
+/* ================================================= */
+
+.caja::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 25px;
+
+    bottom: 0;
+
+    left: 0;
+
+    background: rgba(0,0,0,0.08);
+}
+
+
+/* ================================================= */
 /* TAPA */
+/* ================================================= */
 
 .tapa {
+
     position: absolute;
 
     width: 190px;
+
     height: 42px;
 
     left: 0;
+
     top: 50px;
 
     background: linear-gradient(
@@ -354,6 +230,11 @@ h1 {
 
     transform-origin: left bottom;
 
+    /*
+       Primero se abre.
+       Después desaparece.
+    */
+
     animation:
         abrirTapa 1.5s ease-in-out forwards,
         desaparecerTapa 0.8s ease forwards;
@@ -364,46 +245,50 @@ h1 {
 }
 
 
+/* ================================================= */
 /* CINTA DE LA TAPA */
+/* ================================================= */
 
 .cinta-tapa {
 
     position: absolute;
 
-    width: 25px;
+    width: 28px;
 
-    height: 35px;
+    height: 42px;
 
-    left: 67px;
+    left: 50%;
 
-    top: 15px;
+    transform: translateX(-50%);
 
-    background: #ffd52e;
-
-    z-index: 5;
-
-    transform-origin: left bottom;
-
-    animation:
-        abrirTapa 2s ease-in-out 1s forwards;
+    background: #ffd21c;
 }
 
 
+/* ================================================= */
 /* LAZO */
+/* ================================================= */
 
 .lazo {
 
     position: absolute;
 
-    width: 70px;
+    top: 10px;
+
+    left: 50%;
+
+    width: 65px;
 
     height: 40px;
 
-    left: 38px;
+    transform: translateX(-50%);
 
-    top: -18px;
+    z-index: 10;
 
-    z-index: 6;
+    animation:
+        desaparecerLazo 0.8s ease forwards;
+
+    animation-delay: 2.7s;
 }
 
 
@@ -414,15 +299,16 @@ h1 {
 
     position: absolute;
 
-    width: 38px;
+    width: 35px;
 
-    height: 30px;
+    height: 25px;
 
-    background: #ffd52e;
+    background: #ffd21c;
 
-    border-radius: 50%;
+    border-radius:
+        50% 50% 10% 50%;
 
-    top: 5px;
+    top: 0;
 }
 
 
@@ -430,7 +316,8 @@ h1 {
 
     left: 0;
 
-    transform: rotate(25deg);
+    transform:
+        rotate(25deg);
 }
 
 
@@ -438,104 +325,191 @@ h1 {
 
     right: 0;
 
-    transform: rotate(-25deg);
+    transform:
+        rotate(-25deg);
 }
 
 
+/* ================================================= */
 /* ESTRELLAS */
+/* ================================================= */
 
 .estrella {
 
     position: absolute;
 
-    font-size: 25px;
+    color: #ffd21c;
+
+    font-size: 32px;
 
     opacity: 0;
 
+    text-shadow:
+        0 0 10px #ffffff,
+        0 0 20px #ffd21c;
+
+    /*
+       Aparecen y luego
+       se elevan bastante.
+    */
+
     animation:
-        estrellas 2s ease-out 1.5s forwards;
+        aparecerEstrella 0.6s ease forwards,
+        flotarEstrella 2.5s ease-in-out infinite;
+
 }
 
 
-.estrella1 {
+/* ================================================= */
+/* POSICIÓN DE CADA ESTRELLA */
+/* ================================================= */
 
-    top: 15px;
-    left: 25px;
+.e1 {
+
+    top: 20%;
+
+    left: 18%;
+
+    animation-delay:
+        1.4s,
+        2s;
 }
 
 
-.estrella2 {
+.e2 {
 
-    top: 5px;
-    right: 25px;
+    top: 28%;
+
+    right: 18%;
+
+    animation-delay:
+        1.6s,
+        2.2s;
 }
 
 
-.estrella3 {
+.e3 {
 
-    top: 80px;
-    right: 5px;
+    top: 48%;
+
+    left: 10%;
+
+    animation-delay:
+        1.8s,
+        2.4s;
 }
 
 
-.estrella4 {
+.e4 {
 
-    top: 80px;
-    left: 5px;
+    top: 45%;
+
+    right: 10%;
+
+    animation-delay:
+        2s,
+        2.6s;
 }
 
 
-/* ============================= */
-/* ANIMACIONES */
-/* ============================= */
+.e5 {
 
-@keyframes abrirTapa {
+    top: 70%;
 
-    0% {
+    left: 22%;
+
+    animation-delay:
+        2.2s,
+        2.8s;
+}
+
+
+.e6 {
+
+    top: 68%;
+
+    right: 22%;
+
+    animation-delay:
+        2.4s,
+        3s;
+}
+
+
+.e7 {
+
+    top: 18%;
+
+    left: 48%;
+
+    font-size: 24px;
+
+    animation-delay:
+        1.5s,
+        2.1s;
+}
+
+
+.e8 {
+
+    top: 75%;
+
+    right: 45%;
+
+    font-size: 25px;
+
+    animation-delay:
+        2.3s,
+        2.9s;
+}
+
+
+/* ================================================= */
+/* TEXTO "OBTUVISTE UN PREMIO" */
+/* ================================================= */
+
+.premio-regalo {
+
+    position: absolute;
+
+    bottom: 15%;
+
+    color: white;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    text-align: center;
+
+    opacity: 0;
+
+    text-shadow:
+        0 3px 10px rgba(0,0,0,0.4),
+        0 0 15px #ffd21c;
+
+    animation:
+        aparecerPremio 1s ease forwards;
+
+    animation-delay: 3.2s;
+}
+
+
+/* ================================================= */
+/* ANIMACIÓN: ENTRADA DEL REGALO */
+/* ================================================= */
+
+@keyframes entradaRegalo {
+
+    from {
 
         transform:
-            rotate(0deg)
-            translateY(0);
-    }
+            scale(0.5);
 
-    100% {
-
-        transform:
-            rotate(-25deg)
-            translateY(-45px);
-    }
-}
-
-    
-    @keyframes desaparecerTapa {
-
-    0% {
-        opacity: 1;
-    }
-
-    100% {
         opacity: 0;
     }
-}
 
-
-@keyframes regaloEntrada {
-
-    0% {
-
-        transform:
-            scale(.5);
-
-        opacity: 0;
-    }
-
-    70% {
-
-        transform:
-            scale(1.08);
-    }
-
-    100% {
+    to {
 
         transform:
             scale(1);
@@ -544,294 +518,337 @@ h1 {
     }
 }
 
-@keyframes flotarEstrella {
 
-    0% {
-        transform: translateY(0) scale(1) rotate(0deg);
-    }
+/* ================================================= */
+/* ANIMACIÓN: ABRIR TAPA */
+/* ================================================= */
 
-    50% {
-        transform: translateY(-70px) scale(1.2) rotate(20deg);
-    }
-
-    100% {
-        transform: translateY(-140px) scale(0.9) rotate(40deg);
-    }
-}
-    
-@keyframes estrellas {
+@keyframes abrirTapa {
 
     0% {
 
         transform:
-            scale(.3)
-            translateY(20px);
-
-        opacity: 0;
+            rotate(0deg);
     }
 
     100% {
 
         transform:
-            scale(1.2)
-            translateY(-20px);
-
-        opacity: 1;
+            translate(-20px, -55px)
+            rotate(-25deg);
     }
 }
 
-    
+
+/* ================================================= */
+/* ANIMACIÓN: DESAPARECER CAJA */
+/* ================================================= */
+
 @keyframes desaparecerCaja {
 
     0% {
+
         opacity: 1;
-        transform: scale(1);
+
+        transform:
+            scale(1);
     }
 
     70% {
+
         opacity: 0.5;
-        transform: scale(0.95);
+
+        transform:
+            scale(0.95);
     }
 
     100% {
+
         opacity: 0;
-        transform: scale(0.75);
+
+        transform:
+            scale(0.75);
     }
 }
 
 
-/* ============================= */
-/* PANTALLA DEL PREMIO */
-/* ============================= */
+/* ================================================= */
+/* ANIMACIÓN: DESAPARECER TAPA */
+/* ================================================= */
 
-.premio-icono {
+@keyframes desaparecerTapa {
 
-    font-size: 65px;
+    0% {
 
-    margin: 5px 0;
+        opacity: 1;
+    }
+
+    100% {
+
+        opacity: 0;
+    }
 }
 
 
-.premio {
+/* ================================================= */
+/* ANIMACIÓN: DESAPARECER LAZO */
+/* ================================================= */
 
-    margin: 20px 0;
+@keyframes desaparecerLazo {
 
-    padding: 22px 12px;
+    0% {
 
-    border: 3px solid #ffd329;
+        opacity: 1;
+    }
 
-    border-radius: 20px;
+    100% {
 
-    background:
-        linear-gradient(
-            135deg,
-            #fffdf0,
-            #ffffff
-        );
-
-    box-shadow:
-        0 8px 20px rgba(240,190,0,.15);
+        opacity: 0;
+    }
 }
 
 
-.gratis {
+/* ================================================= */
+/* ANIMACIÓN: APARECER ESTRELLAS */
+/* ================================================= */
 
-    font-size: 32px;
+@keyframes aparecerEstrella {
 
-    font-weight: 950;
+    0% {
 
-    color: #064b9b;
+        opacity: 0;
 
-    line-height: 1.1;
+        transform:
+            scale(0);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
 }
 
 
-.nombre-carrera {
+/* ================================================= */
+/* ANIMACIÓN: ESTRELLAS ELEVÁNDOSE */
+/* ================================================= */
 
-    margin-top: 10px;
+@keyframes flotarEstrella {
 
-    font-size: 17px;
+    0% {
 
-    font-weight: 900;
+        transform:
+            translateY(0)
+            scale(1)
+            rotate(0deg);
+    }
 
-    color: #087fd1;
+    50% {
+
+        transform:
+            translateY(-70px)
+            scale(1.2)
+            rotate(20deg);
+    }
+
+    100% {
+
+        transform:
+            translateY(-140px)
+            scale(0.9)
+            rotate(40deg);
+    }
 }
 
 
-/* ============================= */
-/* WHATSAPP */
-/* ============================= */
+/* ================================================= */
+/* ANIMACIÓN: TEXTO SUPERIOR */
+/* ================================================= */
 
-.whatsapp {
+@keyframes aparecerTexto {
 
-    display: block;
+    from {
 
-    text-decoration: none;
+        opacity: 0;
 
-    background:
-        linear-gradient(
-            135deg,
-            #159447,
-            #20b85b
-        );
+        transform:
+            translateY(-20px);
+    }
 
-    color: white;
+    to {
 
-    border-radius: 15px;
+        opacity: 1;
 
-    padding: 17px 12px;
-
-    font-size: 16px;
-
-    font-weight: 900;
-
-    margin-top: 15px;
-
-    box-shadow:
-        0 7px 15px rgba(20,150,70,.25);
-
-    transition: .2s;
+        transform:
+            translateY(0);
+    }
 }
 
 
-.whatsapp:hover {
+/* ================================================= */
+/* ANIMACIÓN: TEXTO DEL PREMIO */
+/* ================================================= */
 
-    transform:
-        translateY(-2px);
+@keyframes aparecerPremio {
 
-    box-shadow:
-        0 10px 20px rgba(20,150,70,.3);
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.7);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
 }
 
 
-/* ============================= */
-/* BOTÓN VOLVER */
-/* ============================= */
+/* ================================================= */
+/* RESPONSIVE PARA CELULAR */
+/* ================================================= */
 
-.volver {
+@media (max-width: 480px) {
 
-    width: 100%;
+    .texto-regalo {
 
-    border: 0;
-
-    background: #eaf6ff;
-
-    color: #075099;
-
-    border-radius: 14px;
-
-    padding: 14px;
-
-    font-weight: bold;
-
-    margin-top: 10px;
-
-    cursor: pointer;
-}
-
-
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
-
-@media(max-width:400px) {
-
-    .tarjeta {
+        font-size: 23px;
 
         padding:
-            24px 15px;
+            0 20px;
     }
 
-    h1 {
+
+    .regalo {
+
+        transform:
+            scale(0.9);
+    }
+
+
+    .premio-regalo {
 
         font-size: 25px;
-    }
 
-    .gratis {
-
-        font-size: 28px;
-    }
-
-    .logo-imagen {
-
-        width: 160px;
+        padding:
+            0 20px;
     }
 
 }
+
+
+/* ================================================= */
+/* HTML DEL REGALO */
+/* ================================================= */
 
 </style>
 
 </head>
 
-
 <body>
 
 
-<div class="contenedor">
-
-<div class="tarjeta">
-
-
 <!-- ================================================= -->
-<!-- PANTALLA 1: ANIMACIÓN DEL REGALO -->
+<!-- PANTALLA 1: REGALO -->
 <!-- ================================================= -->
 
-<section id="regalo" class="pantalla-regalo">
+<div id="regalo">
 
-<img
-src="logo-citec.webp"
-class="logo-imagen"
-alt="Logo CITEC"
->
 
-<div class="eslogan">
+    <div class="texto-regalo">
+
+        🎁 ¡ABRE TU REGALO! 🎁
+
+    </div>
+
+
+    <div class="regalo">
+
+
+        <!-- ESTRELLAS -->
+
+        <div class="estrella e1">★</div>
+
+        <div class="estrella e2">★</div>
+
+        <div class="estrella e3">✦</div>
+
+        <div class="estrella e4">★</div>
+
+        <div class="estrella e5">✦</div>
+
+        <div class="estrella e6">★</div>
+
+        <div class="estrella e7">✦</div>
+
+        <div class="estrella e8">★</div>
+
+
+        <!-- CAJA -->
+
+        <div class="caja"></div>
+
+
+        <!-- TAPA -->
+
+        <div class="tapa">
+
+            <div class="cinta-tapa"></div>
+
+        </div>
+
+
+        <!-- LAZO -->
+
+        <div class="lazo"></div>
+
+
+    </div>
+
+
+    <!-- TEXTO PREMIO -->
+
+    <div class="premio-regalo">
+
+        🎉 ¡OBTUVISTE UN PREMIO! 🎉
+
+    </div>
+
+
 </div>
 
 
-<div class="regalo">
-
-<div class="estrella estrella1">⭐</div>
-
-<div class="estrella estrella2">✨</div>
-
-<div class="estrella estrella3">⭐</div>
-
-<div class="estrella estrella4">✨</div>
-
-<div class="estrella estrella1">⭐</div>
-
-<div class="estrella estrella2">✨</div>
-
-<div class="estrella estrella3">⭐</div>
-
-<div class="estrella estrella4">✨</div>
-
-<div class="lazo"></div>
-
-<div class="tapa"></div>
-
-<div class="cinta-tapa"></div>
-
-<div class="caja"></div>
-
-<div class="cinta-vertical"></div>
-
-</div>
+<script>
 
 
-<h1>
-🎉 ¡OBTUVISTE UN PREMIO!
-</h1>
+/* ================================================= */
+/* PASAR A LA SIGUIENTE PANTALLA */
+/* ================================================= */
+
+setTimeout(function() {
+
+    document.getElementById("regalo").style.display = "none";
+
+    document.getElementById("inicio").style.display = "flex";
+
+}, 5000);
 
 
-<p class="descripcion">
-
-¡Tenemos una sorpresa para ti!
-
-</p>
+</script>
 
 
-</section>
+<!-- ================================================= -->
+<!-- PANTALLA 2: BENEFICIO -->
+<!-- ================================================= -->
+```
 
 
 <!-- ================================================= -->
